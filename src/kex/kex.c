@@ -2,9 +2,12 @@
 
 #include <oqs/kex.h>
 #include <oqs/kex_lwe_frodo.h>
+#include <oqs/kex_lwe_okcn.h>
+#include <oqs/kex_lwr_okcn.h>
 #include <oqs/kex_rlwe_bcns15.h>
 #include <oqs/kex_rlwe_msrln16.h>
-#include <oqs/kex_rlwe_newhope.h>
+#include <oqs/kex_rlwe_newhope_simple.h>
+#include <oqs/kex_rlwe_zarzar.h>
 #include <oqs/kex_sidh_cln16.h>
 
 #ifdef ENABLE_CODE_MCBITS
@@ -29,8 +32,16 @@ OQS_KEX *OQS_KEX_new(OQS_RAND *rand, enum OQS_KEX_alg_name alg_name, const uint8
 		return OQS_KEX_rlwe_msrln16_new(rand);
 	case OQS_KEX_alg_rlwe_newhope:
 		return OQS_KEX_rlwe_newhope_new(rand);
+	case OQS_KEX_alg_rlwe_newhope_simple:
+		return OQS_KEX_rlwe_newhope_simple_new(rand);
+	case OQS_KEX_alg_rlwe_zarzar:
+		return OQS_KEX_rlwe_zarzar_new(rand);
 	case OQS_KEX_alg_lwe_frodo:
 		return OQS_KEX_lwe_frodo_new_recommended(rand, seed, seed_len, named_parameters);
+	case OQS_KEX_alg_lwe_okcn:
+		return OQS_KEX_lwe_okcn_new(rand, seed, seed_len, named_parameters);
+	case OQS_KEX_alg_lwr_okcn:
+		return OQS_KEX_lwr_okcn_new(rand, seed, seed_len, named_parameters);
 	case OQS_KEX_alg_sidh_cln16:
 		return OQS_KEX_sidh_cln16_new(rand);
 

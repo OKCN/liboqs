@@ -128,7 +128,11 @@ SRCDIR=" src/common src/crypto/aes src/kex src/crypto/rand src/crypto/sha3"
 SRCDIR=${SRCDIR}" src/crypto/rand_urandom_aesctr src/crypto/rand_urandom_chacha20"
 SRCDIR=${SRCDIR}" src/kex_rlwe_bcns15/"
 SRCDIR=${SRCDIR}" src/kex_rlwe_newhope"
+SRCDIR=${SRCDIR}" src/kex_rlwe_newhope_simple"
+SRCDIR=${SRCDIR}" src/kex_rlwe_zarzar"
 SRCDIR=${SRCDIR}" src/kex_lwe_frodo"
+SRCDIR=${SRCDIR}" src/kex_lwe_okcn"
+SRCDIR=${SRCDIR}" src/kex_lwr_okcn"
 SRCDIR=${SRCDIR}" src/kex_rlwe_msrln16"
 SRCDIR=${SRCDIR}" src/kex_sidh_cln16"
 
@@ -178,11 +182,15 @@ AC_CONFIG_FILES([Makefile
                  src/crypto/aes/Makefile
                  src/kex_rlwe_bcns15/Makefile
                  src/kex_rlwe_newhope/Makefile
+                 src/kex_rlwe_newhope_simple/Makefile
+                 src/kex_rlwe_zarzar/Makefile
                  src/kex_rlwe_msrln16/Makefile
                  src/kex_sidh_cln16/Makefile
                  src/kex_code_mcbits/Makefile
                  src/kex_ntru/Makefile
                  src/kex_sidh_iqc_ref/Makefile
-                 src/kex_lwe_frodo/Makefile])
+                 src/kex_lwe_frodo/Makefile
+                 src/kex_lwe_okcn/Makefile
+                 src/kex_lwr_okcn/Makefile])
 
 AC_OUTPUT

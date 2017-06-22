@@ -17,8 +17,10 @@ liboqs_la_SOURCES =
 liboqs_la_LIBADD = src/common/libcommon.la src/kex/libkex.la src/crypto/rand/librand.la src/crypto/aes/libaes.la
 liboqs_la_LIBADD += src/crypto/rand_urandom_aesctr/librandaesctr.la src/crypto/sha3/libsha3.la
 liboqs_la_LIBADD += src/crypto/rand_urandom_chacha20/librandchacha20.la
-liboqs_la_LIBADD += src/kex_rlwe_bcns15/libbcns15.la src/kex_rlwe_newhope/libnewhope.la
+liboqs_la_LIBADD += src/kex_rlwe_bcns15/libbcns15.la src/kex_rlwe_newhope/libnewhope.la 
+liboqs_la_LIBADD += src/kex_rlwe_newhope_simple/libnewhopesimple.la src/kex_rlwe_zarzar/libzarzar.la
 liboqs_la_LIBADD += src/kex_lwe_frodo/libfrodo.la src/kex_rlwe_msrln16/libmsrln16.la
+liboqs_la_LIBADD += src/kex_lwe_okcn/libokcn.la src/kex_lwr_okcn/liblwrokcn.la
 liboqs_la_LIBADD += src/kex_sidh_cln16/libcln16.la
 
 if USE_MCBITS
@@ -97,8 +99,12 @@ links:
 	$(LN_S) -f ../../src/crypto/rand_urandom_chacha20/rand_urandom_chacha20.h include/oqs
 	$(LN_S) -f ../../src/crypto/rand_urandom_aesctr/rand_urandom_aesctr.h include/oqs
 	$(LN_S) -f ../../src/kex_rlwe_newhope/kex_rlwe_newhope.h include/oqs
+	$(LN_S) -f ../../src/kex_rlwe_newhope_simple/kex_rlwe_newhope_simple.h include/oqs
+	$(LN_S) -f ../../src/kex_rlwe_zarzar/kex_rlwe_zarzar.h include/oqs
 	$(LN_S) -f ../../src/kex_rlwe_msrln16/kex_rlwe_msrln16.h include/oqs
 	$(LN_S) -f ../../src/kex_lwe_frodo/kex_lwe_frodo.h include/oqs
+	$(LN_S) -f ../../src/kex_lwe_okcn/kex_lwe_okcn.h include/oqs
+	$(LN_S) -f ../../src/kex_lwr_okcn/kex_lwr_okcn.h include/oqs
 	$(LN_S) -f ../../src/kex_rlwe_bcns15/kex_rlwe_bcns15.h include/oqs
 	$(LN_S) -f ../../src/kex_sidh_cln16/kex_sidh_cln16.h include/oqs
 	$(LN_S) -f .libs/liboqs.a
