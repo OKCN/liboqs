@@ -18,7 +18,7 @@ liboqs_la_LIBADD = src/common/libcommon.la src/kex/libkex.la src/crypto/rand/lib
 liboqs_la_LIBADD += src/crypto/rand_urandom_aesctr/librandaesctr.la src/crypto/sha3/libsha3.la
 liboqs_la_LIBADD += src/crypto/rand_urandom_chacha20/librandchacha20.la
 liboqs_la_LIBADD += src/kex_rlwe_bcns15/libbcns15.la src/kex_rlwe_newhope/libnewhope.la 
-liboqs_la_LIBADD += src/kex_rlwe_newhope_simple/libnewhopesimple.la src/kex_rlwe_zarzar/libzarzar.la
+liboqs_la_LIBADD += src/kex_rlwe_newhope_simple/libnewhopesimple.la src/kex_rlwe_zarzar/libzarzar.la src/kex_rlwe_E8/libE8.la
 liboqs_la_LIBADD += src/kex_lwe_frodo/libfrodo.la src/kex_rlwe_msrln16/libmsrln16.la
 liboqs_la_LIBADD += src/kex_lwe_okcn/libokcn.la src/kex_lwr_okcn/liblwrokcn.la
 liboqs_la_LIBADD += src/kex_sidh_cln16/libcln16.la
@@ -101,6 +101,7 @@ links:
 	$(LN_S) -f ../../src/kex_rlwe_newhope/kex_rlwe_newhope.h include/oqs
 	$(LN_S) -f ../../src/kex_rlwe_newhope_simple/kex_rlwe_newhope_simple.h include/oqs
 	$(LN_S) -f ../../src/kex_rlwe_zarzar/kex_rlwe_zarzar.h include/oqs
+	$(LN_S) -f ../../src/kex_rlwe_E8/kex_rlwe_E8.h include/oqs
 	$(LN_S) -f ../../src/kex_rlwe_msrln16/kex_rlwe_msrln16.h include/oqs
 	$(LN_S) -f ../../src/kex_lwe_frodo/kex_lwe_frodo.h include/oqs
 	$(LN_S) -f ../../src/kex_lwe_okcn/kex_lwe_okcn.h include/oqs

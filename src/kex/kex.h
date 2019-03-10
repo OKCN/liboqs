@@ -17,6 +17,7 @@ enum OQS_KEX_alg_name {
 	OQS_KEX_alg_rlwe_newhope,
 	OQS_KEX_alg_rlwe_newhope_simple,
 	OQS_KEX_alg_rlwe_zarzar,
+	OQS_KEX_alg_rlwe_E8,
 	OQS_KEX_alg_rlwe_msrln16,
 	OQS_KEX_alg_lwe_frodo,
 	OQS_KEX_alg_lwe_okcn,

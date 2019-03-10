@@ -130,6 +130,7 @@ SRCDIR=${SRCDIR}" src/kex_rlwe_bcns15/"
 SRCDIR=${SRCDIR}" src/kex_rlwe_newhope"
 SRCDIR=${SRCDIR}" src/kex_rlwe_newhope_simple"
 SRCDIR=${SRCDIR}" src/kex_rlwe_zarzar"
+SRCDIR=${SRCDIR}" src/kex_rlwe_E8"
 SRCDIR=${SRCDIR}" src/kex_lwe_frodo"
 SRCDIR=${SRCDIR}" src/kex_lwe_okcn"
 SRCDIR=${SRCDIR}" src/kex_lwr_okcn"
@@ -184,6 +185,7 @@ AC_CONFIG_FILES([Makefile
                  src/kex_rlwe_newhope/Makefile
                  src/kex_rlwe_newhope_simple/Makefile
                  src/kex_rlwe_zarzar/Makefile
+                 src/kex_rlwe_E8/Makefile
                  src/kex_rlwe_msrln16/Makefile
                  src/kex_sidh_cln16/Makefile
                  src/kex_code_mcbits/Makefile
